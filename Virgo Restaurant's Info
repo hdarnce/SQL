@@ -1,0 +1,20 @@
+create table virgo_restaurant (id integer primary key, name text, price integer,item_cusine text, course_description text);
+insert into virgo_restaurant values (1, "deep_fried_brussels", 3.00, "southern","appetizers");
+insert into virgo_restaurant values (2, "spam_musubi", 3.50, "asian", "appetizers");
+insert into virgo_restaurant values (3, "sweet_n_sour_fries", 3.50, "western_asian", "appetizers");
+insert into virgo_restaurant values (4, "potato chips", 3.00, "western", "appetizers");
+insert into virgo_restaurant values (5, "chef_platter", 12.00, "western", "appetizers"); 
+insert into virgo_restaurant values (6, "griled_cheese", 7.00, "western", "main_course"); 
+insert into virgo_restaurant values (7, "burger", 7.50, "western", "main_course");
+insert into virgo_restaurant values (8, "fried_rice_plate", 10.00, "asian", "main_course");
+insert into virgo_restaurant values (9, "grand_slam", 12.50, "western", "main_course");
+insert into virgo_restaurant values (10, "pork_sandwich", 8.00, "latin", "main_course"); 
+insert into virgo_restaurant values (11, "flan", 4.00, "latin", "dessert"); 
+insert into virgo_restaurant values (12, "breadpuddign", 4.00, "western", "dessert");
+insert into virgo_restaurant values (13,"ice_cream", 4.00, "western",  "dessert");
+insert into virgo_restaurant values (14, "lava_cake", 4.50, "french", "dessert");
+insert into virgo_restaurant values (15, "duckano", 5.00, "caribbean", "dessert");
+
+select * from virgo_restaurant where price > 10.00 order by price;
+
+select name, avg(price) from virgo_restaurant group by price;
